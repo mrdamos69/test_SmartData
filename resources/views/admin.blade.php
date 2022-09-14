@@ -20,7 +20,7 @@
                 style="width:100%; border-radius:5px;">
                 <tr>
                     <th>
-                        <h3>СПИСОК АВТОРОВ:</h3>
+                        <h3>ВЫ ВОШЛИ КАК АДМИНИСТРАТОР</h3>
                     </th>
                 </tr>
             </table>

@@ -35,19 +35,20 @@
                     <td bgcolor="#e6e6fa">
                         <h2>Меню</h2>
                         <p>
-                            <!--Ссылка на страницу сайта-->
-                            <a href="">
-                                <!--Картинка маркера перед названием страницы-->
+                            <a href='authors'>
                                 <img src="http://trueimages.ru/img/00/06/f4fffdb5.png">
-                                <!--Название страницы
-                                style="margin-left:5px;" - отступ названия от маркера-->
                                 <span style="margin-left:5px;">СПИСОК АВТОРОВ</span></a>
                             <!--Закрываем абзац-->
                         </p>
                         <p>
-                            <a href="">
+                            <a href='books'>
                                 <img src="http://trueimages.ru/img/31/ab/4dcb087c2ae4305edcd15171696.jpg">
-                                <span style="margin-left:5px;">СПИСОК КНИГ</span;></a>
+                                <span style="margin-left:5px;">СПИСОК КНИГ</span></a>
+                        </p>
+                        <p>
+                            <a href='admin'>
+                                <img src="http://trueimages.ru/img/31/ab/4dcb087c2ae4305edcd15171696.jpg">
+                                <span style="margin-left:5px;">ВХОД АДМИНИСТРАТОРА</span></a>
                         </p>
                     </td>
                 </tr>

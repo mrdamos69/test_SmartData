@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::get('/admin', function () {
+    return view('admin');
+})->name('admin');
+
 Route::get('/books', function () {
     return view('list_of_books');
 })->name("books");
