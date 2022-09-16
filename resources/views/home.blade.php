@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="author" content="mrdamos69">
     <meta name="generator" content="Hugo 0.101.0">
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/jumbotron/">
@@ -116,9 +116,16 @@
                 <div class="h-100 p-5 bg-light border rounded-3">
                     <h2>Добавить новую книгу</h2>
                     <p>А также здесь можно выкладывать свои книги.</p>
-                    <a href='admin'>
+                    <a href='admin_add'>
                         <button class="btn btn-outline-secondary" type="button">Добавить</button>
                     </a>
+                    <a href='admin_delete'>
+                        <button class="btn btn-outline-secondary" type="button">Удалить</button>
+                    </a>
+                    <a href='admin_remove'>
+                        <button class="btn btn-outline-secondary" type="button">Изменить</button>
+                    </a>
+
                 </div>
             </div>
         </div>

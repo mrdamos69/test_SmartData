@@ -91,17 +91,33 @@
             </a>
         </header>
 
-        <div class="p-5 mb-4 bg-light rounded-3">
-            <div class="h-100 p-5 text-bg-dark rounded-3">
-                <h2 class="display-6 fw-bold">Весь список авторов:</h2>
+        <div class="col-12">
+            <label for="address" class="form-label">Пожалуйста, введите название книги для изменения:</label>
+            <input type="text" class="form-control" id="address" placeholder="Название книги для поиска" required>
+            <div class="invalid-feedback">
+                Пожалуйста, введите название книги для изменения:
             </div>
         </div>
-        <div class="p-5 mb-4 bg-light rounded-3">
-            <div class="container-fluid py-5">
+        <footer class="mt-3">
+        <button class="w-100 btn btn-primary btn-lg" type="submit">Найти книгу</button>
+
+        <footer class="pt-3 mt-4 text-muted border-top">
+
+        <div class="col-12">
+            <label for="address" class="form-label">Введите новое название книги:</label>
+            <input type="text" class="form-control" id="address" placeholder="Новое название" required>
+            <div class="invalid-feedback">
             </div>
         </div>
 
-
+        <div class="col-12">
+            <label for="address" class="form-label">Введите новое автора для этой книги:</label>
+            <input type="text" class="form-control" id="address" placeholder="Новый автор" required>
+            <div class="invalid-feedback">
+            </div>
+        </div>
+            <footer class="mt-3">
+            <button class="w-100 btn btn-primary btn-lg" type="submit">Изменить книгу и автора</button>
         <footer class="pt-3 mt-4 text-muted border-top">
             &copy; 2022
         </footer>

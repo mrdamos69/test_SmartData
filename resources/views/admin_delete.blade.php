@@ -91,17 +91,14 @@
             </a>
         </header>
 
-        <div class="p-5 mb-4 bg-light rounded-3">
-            <div class="h-100 p-5 text-bg-dark rounded-3">
-                <h2 class="display-6 fw-bold">Весь список авторов:</h2>
+        <div class="col-12">
+            <label for="address" class="form-label">Пожалуйста, введите название книги которую хотите удалить:</label>
+            <input type="text" class="form-control" id="address" placeholder="Название книги для удаления" required>
+            <div class="invalid-feedback">
             </div>
         </div>
-        <div class="p-5 mb-4 bg-light rounded-3">
-            <div class="container-fluid py-5">
-            </div>
-        </div>
-
-
+        <footer class="mt-3">
+        <button class="w-100 btn btn-primary btn-lg" type="submit">Удалить</button>
         <footer class="pt-3 mt-4 text-muted border-top">
             &copy; 2022
         </footer>

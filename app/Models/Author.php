@@ -8,5 +8,4 @@ use Illuminate\Database\Eloquent\Model;
 class Author extends Model
 {
     use HasFactory;
-    private string $author_name_;
 }

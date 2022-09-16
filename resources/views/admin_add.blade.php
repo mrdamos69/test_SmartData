@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="author" content="mrdamos69">
     <meta name="generator" content="Hugo 0.101.0">
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/jumbotron/">
@@ -92,23 +92,21 @@
         </header>
 
         <div class="col-12">
-            <label for="address" class="form-label">Название книги:</label>
-            <input type="text" class="form-control" id="address" placeholder="..." required>
+            <label for="address" class="form-label">Введите название книги для добавления:</label>
+            <input type="text" class="form-control" id="address" placeholder="Книга" required>
             <div class="invalid-feedback">
                 Пожалуйста, введите название книги.
             </div>
         </div>
 
         <div class="col-12">
-            <label for="address" class="form-label">Автор книги:</label>
-            <input type="text" class="form-control" id="address" placeholder="..." required>
+            <label for="address" class="form-label">Введите автора книги:</label>
+            <input type="text" class="form-control" id="address" placeholder="Автор" required>
             <div class="invalid-feedback">
                 Пожалуйста, введите автора книги.
             </div>
         </div>
-
-        <hr class="my-4">
-
+        <footer class="mt-3">
         <button class="w-100 btn btn-primary btn-lg" type="submit">Добавить книгу в библиотеку</button>
         <footer class="pt-3 mt-4 text-muted border-top">
             &copy; 2022

@@ -17,9 +17,17 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/admin', function () {
-    return view('admin');
-})->name('admin');
+Route::get('/admin_add', function () {
+    return view('admin_add');
+})->name('admin_add');
+
+Route::get('/admin_delete', function () {
+    return view('admin_delete');
+})->name('admin_delete');
+
+Route::get('/admin_remove', function () {
+    return view('admin_remove');
+})->name('admin_remove');
 
 Route::get('/books', function () {
     return view('list_of_books');

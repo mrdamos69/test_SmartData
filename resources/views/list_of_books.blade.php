@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="author" content="mrdamos69">
     <meta name="generator" content="Hugo 0.101.0">
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/jumbotron/">
@@ -98,6 +98,10 @@
         </div>
         <div class="p-5 mb-4 bg-light rounded-3">
             <div class="container-fluid py-5">
+                <table class"table">
+                    <tr>
+                    </tr>
+                </table>
             </div>
         </div>
 
