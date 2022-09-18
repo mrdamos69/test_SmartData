@@ -94,10 +94,11 @@
         <div class="p-5 mb-4 bg-light rounded-3">
             <div class="h-100 p-5 text-bg-dark rounded-3">
                 <h2 class="display-6 fw-bold">Весь список авторов:</h2>
-            </div>
-        </div>
-        <div class="p-5 mb-4 bg-light rounded-3">
-            <div class="container-fluid py-5">
+                @foreach($data as $elem)
+                    <div class="alert alert-info">
+                        <h3>{{ $elem->Book_author }}</h3>
+                    </div>
+                @endforeach
             </div>
         </div>
 

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Request;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\AuthorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,14 +24,6 @@ Route::get('/admin_add', function () {
     return view('admin_add');
 })->name('admin_add');
 
-//Route::post('/admin_add/push', function () {
-//    return view('admin_push_ok');
-//})->name('push_book');
-
-//Route::post('/admin_add/push', function () {
-//    dd(Request::all());
-//})->name('push_book');
-
 Route::post('/admin_add/push', [BookController::class, 'store'])->name('push_book');
 
 Route::get('/admin_delete', function () {
@@ -41,11 +34,7 @@ Route::get('/admin_remove', function () {
     return view('admin_remove');
 })->name('admin_remove');
 
-Route::get('/books', function () {
-    return view('list_of_books');
-})->name("books");
+Route::get('/books', [BookController::class, 'create'])->name("books");
 
-Route::get('/authors', function () {
-    return view('list_of_authors');
-})->name('authors');
+Route::get('/authors', [AuthorController::class, 'create'])->name('authors');
 

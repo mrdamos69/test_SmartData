@@ -23,11 +23,12 @@ class BookController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function create()
     {
-//        return "OKEY";
+        $data = Book::all();
+        return view('list_of_books', compact('data'));
     }
 
     /**

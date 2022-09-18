@@ -9,10 +9,6 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/jumbotron/">
 
-
-
-
-
     <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
     <!-- Favicons -->
@@ -78,7 +74,6 @@
         }
     </style>
 
-
 </head>
 <body>
 
@@ -98,19 +93,14 @@
         </div>
         <div class="p-5 mb-4 bg-light rounded-3">
             <div class="container-fluid py-5">
-
-                <div class="row row-cols-1 row-cols-md-3 gx-4 text-center">
-                    <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
-                    <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
-                    <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
-                    <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
-                    <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
-                    <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
-                </div>
-
+                @foreach($data as $elem)
+                    <div class="alert alert-info">
+                        <h3>{{ $elem->Name_book }}</h3>
+                        <p>{{ $elem->Book_author }}</p>
+                    </div>
+                @endforeach
             </div>
         </div>
-
 
         <footer class="pt-3 mt-4 text-muted border-top">
             &copy; 2022
