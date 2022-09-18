@@ -35,7 +35,11 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $book = new Book();
+        $book->NameBook = $request->input('NameBook');
+        $book->BookAuthor = $request->input('BookAuthor');
+        $book->save();
+        return redirect()->route('home');
     }
 
     /**

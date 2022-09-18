@@ -98,10 +98,16 @@
         </div>
         <div class="p-5 mb-4 bg-light rounded-3">
             <div class="container-fluid py-5">
-                <table class"table">
-                    <tr>
-                    </tr>
-                </table>
+
+                <div class="row row-cols-1 row-cols-md-3 gx-4 text-center">
+                    <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
+                    <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
+                    <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
+                    <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
+                    <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
+                    <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
+                </div>
+
             </div>
         </div>
 

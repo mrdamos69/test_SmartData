@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,14 @@ Route::get('/admin_add', function () {
     return view('admin_add');
 })->name('admin_add');
 
+//Route::post('/admin_add/push', function () {
+//    return view('admin_push_ok');
+//})->name('push_book');
+
+Route::post('/admin_add/push', function () {
+    dd(Request::all());
+})->name('push_book');
+
 Route::get('/admin_delete', function () {
     return view('admin_delete');
 })->name('admin_delete');
@@ -36,3 +45,4 @@ Route::get('/books', function () {
 Route::get('/authors', function () {
     return view('list_of_authors');
 })->name('authors');
+
