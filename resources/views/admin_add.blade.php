@@ -90,6 +90,14 @@
                     <span class="fs-4">БИБЛИОТЕКЕ</span>
                 </a>
             </header>
+            @if($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{$error}}</li>
+                        @endforeach
+                    </ul>
+            @endif
             <form action="/admin_add/push" method="post">
                 @csrf
                 <div class="col-12">

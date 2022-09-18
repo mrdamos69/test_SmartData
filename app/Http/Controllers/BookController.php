@@ -2,15 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BookRequest;
 use App\Models\Book;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class BookController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
@@ -20,33 +23,33 @@ class BookController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
-        //
+//        return "OKEY";
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param BookRequest $request
+     * @return RedirectResponse
      */
-    public function store(Request $request)
+    public function store(BookRequest $request)
     {
         $book = new Book();
-        $book->NameBook = $request->input('NameBook');
-        $book->BookAuthor = $request->input('BookAuthor');
+        $book->Name_book = $request->input('NameBook');
+        $book->Book_author = $request->input('BookAuthor');
         $book->save();
-        return redirect()->route('home');
+        return redirect()->route('home')->with('success', 'Книга была успешно добавлена');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Book  $book
-     * @return \Illuminate\Http\Response
+     * @param Book $book
+     * @return Response
      */
     public function show(Book $book)
     {
@@ -56,8 +59,8 @@ class BookController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Book  $book
-     * @return \Illuminate\Http\Response
+     * @param Book $book
+     * @return Response
      */
     public function edit(Book $book)
     {
@@ -67,9 +70,9 @@ class BookController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Book  $book
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param Book $book
+     * @return Response
      */
     public function update(Request $request, Book $book)
     {
@@ -79,8 +82,8 @@ class BookController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Book  $book
-     * @return \Illuminate\Http\Response
+     * @param Book $book
+     * @return Response
      */
     public function destroy(Book $book)
     {
