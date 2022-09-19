@@ -9,10 +9,6 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/jumbotron/">
 
-
-
-
-
     <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
     <!-- Favicons -->
@@ -91,8 +87,8 @@
             </a>
         </header>
 
-        <div class="p-5 mb-4 bg-light rounded-3">
-            <div class="h-100 p-5 text-bg-dark rounded-3">
+        <div class="p-3 mb-3 bg-light rounded-3">
+            <div class="h-100 p-3 text-bg-dark rounded-3">
                 <h2 class="display-6 fw-bold">Весь список авторов:</h2>
                 @foreach($data as $elem)
                     <div class="alert alert-info">

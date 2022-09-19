@@ -86,13 +86,13 @@
             </a>
         </header>
 
-        <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="p-3 mb-3 bg-light rounded-3">
             <div class="h-100 p-5 text-bg-dark rounded-3">
                 <h2 class="display-6 fw-bold">Весь список книг:</h2>
             </div>
         </div>
-        <div class="p-5 mb-4 bg-light rounded-3">
-            <div class="container-fluid py-5">
+        <div class="p-3 mb-2 bg-light rounded-3">
+            <div class="container-fluid py-2">
                 @foreach($data as $elem)
                     <div class="alert alert-info">
                         <h3>{{ $elem->Name_book }}</h3>
@@ -102,7 +102,7 @@
             </div>
         </div>
 
-        <footer class="pt-3 mt-4 text-muted border-top">
+        <footer class="pt-3 mt-3 text-muted border-top">
             &copy; 2022
         </footer>
     </div>

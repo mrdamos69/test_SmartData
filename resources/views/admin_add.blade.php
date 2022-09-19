@@ -90,6 +90,7 @@
                     <span class="fs-4">БИБЛИОТЕКЕ</span>
                 </a>
             </header>
+
             @if($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -103,17 +104,13 @@
                 <div class="col-12">
                     <label for="NameBook" class="form-label">Введите название книги для добавления:</label>
                     <input type="text" class="form-control" id="NameBook" name="NameBook" placeholder="Книга" required>
-                    <div class="invalid-feedback">
-                        Пожалуйста, введите название книги.
-                    </div>
+                    <div class="invalid-feedback"></div>
                 </div>
 
                 <div class="col-12">
                     <label for="BookAuthor" class="form-label">Введите автора книги:</label>
                     <input type="text" class="form-control" id="BookAuthor" name="BookAuthor" placeholder="Автор" required>
-                    <div class="invalid-feedback">
-                        Пожалуйста, введите автора книги.
-                    </div>
+                    <div class="invalid-feedback"></div>
                 </div>
                 <footer class="mt-3">
                 <button class="w-100 btn btn-primary btn-lg" type="submit">Добавить книгу в библиотеку</button>

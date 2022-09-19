@@ -91,14 +91,22 @@
             </a>
         </header>
 
-        <div class="col-12">
-            <label for="address" class="form-label">Пожалуйста, введите название книги которую хотите удалить:</label>
-            <input type="text" class="form-control" id="address" placeholder="Название книги для удаления" required>
-            <div class="invalid-feedback">
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{session('success')}}
             </div>
-        </div>
-        <footer class="mt-3">
-        <button class="w-100 btn btn-primary btn-lg" type="submit">Удалить</button>
+        @endif
+
+        <form action="/admin_delete/del" method="get">
+            @csrf
+            <div class="col-12">
+                <label for="address" class="form-label">Пожалуйста, введите название книги которую хотите удалить:</label>
+                <input type="text" class="form-control" id="NameBook" name="NameBook" placeholder="Название книги для удаления" required>
+                <div class="invalid-feedback"></div>
+            </div>
+            <footer class="mt-3">
+            <button class="w-100 btn btn-primary btn-lg" type="submit">Удалить</button>
+        </form>
         <footer class="pt-3 mt-4 text-muted border-top">
             &copy; 2022
         </footer>

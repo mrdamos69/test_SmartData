@@ -30,6 +30,8 @@ Route::get('/admin_delete', function () {
     return view('admin_delete');
 })->name('admin_delete');
 
+Route::get('/admin_delete/del', [BookController::class, 'delete'])->name('pop_book');
+
 Route::get('/admin_remove', function () {
     return view('admin_remove');
 })->name('admin_remove');
@@ -37,4 +39,3 @@ Route::get('/admin_remove', function () {
 Route::get('/books', [BookController::class, 'create'])->name("books");
 
 Route::get('/authors', [AuthorController::class, 'create'])->name('authors');
-

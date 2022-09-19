@@ -7,6 +7,9 @@ use App\Models\Book;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
+use JetBrains\PhpStorm\NoReturn;
 
 class BookController extends Controller
 {
@@ -37,7 +40,7 @@ class BookController extends Controller
      * @param BookRequest $request
      * @return RedirectResponse
      */
-    public function store(BookRequest $request)
+    public function store(BookRequest $request): RedirectResponse
     {
         $book = new Book();
         $book->Name_book = $request->input('NameBook');
@@ -89,5 +92,16 @@ class BookController extends Controller
     public function destroy(Book $book)
     {
         //
+    }
+
+    public function delete(Request $request)
+    {
+        $name = $request->input('NameBook');
+        if(DB::table('books')->where('Name_book', '=',
+            $request->input('NameBook'))->delete()) {
+            return redirect()->route('home')->with('success', 'Книга была успешно удалена');
+        } else {
+            return redirect()->route('admin_delete')->with('success', 'Введенной книги не существует');
+        }
     }
 }
