@@ -18,7 +18,7 @@ class BookController extends Controller
      *
      * @return Response
      */
-    public function index()
+    public function index(): Response
     {
         //
     }
@@ -55,7 +55,7 @@ class BookController extends Controller
      * @param Book $book
      * @return Response
      */
-    public function show(Book $book)
+    public function show(Book $book): Response
     {
         //
     }
@@ -66,7 +66,7 @@ class BookController extends Controller
      * @param Book $book
      * @return Response
      */
-    public function edit(Book $book)
+    public function edit(Book $book): Response
     {
         //
     }
@@ -78,7 +78,7 @@ class BookController extends Controller
      * @param Book $book
      * @return Response
      */
-    public function update(Request $request, Book $book)
+    public function update(Request $request, Book $book): Response
     {
         //
     }
@@ -94,7 +94,7 @@ class BookController extends Controller
         //
     }
 
-    public function delete(Request $request)
+    public function delete(Request $request): RedirectResponse
     {
         $name = $request->input('NameBook');
         if(DB::table('books')->where('Name_book', '=',
@@ -102,6 +102,24 @@ class BookController extends Controller
             return redirect()->route('home')->with('success', 'Книга была успешно удалена');
         } else {
             return redirect()->route('admin_delete')->with('success', 'Введенной книги не существует');
+        }
+    }
+
+    public function remove(Request $request): RedirectResponse
+    {
+        $oldName = $request->input('OldBook');
+        $newName = $request->input('NewBook');
+        $newAuthor = $request->input('NewAuthor');
+
+        if(DB::table('books')
+            ->where('Name_book', '=', $oldName)
+            ->update(['Name_book' => $newName])) {
+            DB::table('books')
+                ->where('Name_book', '=', $oldName)
+                ->update(['Book_author' => $newAuthor]);
+            return redirect()->route('home')->with('success', 'Книга была успешно изменена');
+        } else {
+            return redirect()->route('admin_remove')->with('success', 'Введенной книги не существует');
         }
     }
 }

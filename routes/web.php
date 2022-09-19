@@ -36,6 +36,8 @@ Route::get('/admin_remove', function () {
     return view('admin_remove');
 })->name('admin_remove');
 
+Route::get('/admin_remove/remove', [BookController::class, 'remove'])->name('remove_book');
+
 Route::get('/books', [BookController::class, 'create'])->name("books");
 
 Route::get('/authors', [AuthorController::class, 'create'])->name('authors');

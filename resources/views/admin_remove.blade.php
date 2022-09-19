@@ -91,33 +91,41 @@
             </a>
         </header>
 
-        <div class="col-12">
-            <label for="address" class="form-label">Пожалуйста, введите название книги для изменения:</label>
-            <input type="text" class="form-control" id="address" placeholder="Название книги для поиска" required>
-            <div class="invalid-feedback">
-                Пожалуйста, введите название книги для изменения:
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{session('success')}}
             </div>
-        </div>
-        <footer class="mt-3">
-        <button class="w-100 btn btn-primary btn-lg" type="submit">Найти книгу</button>
+        @endif
 
-        <footer class="pt-3 mt-4 text-muted border-top">
-
-        <div class="col-12">
-            <label for="address" class="form-label">Введите новое название книги:</label>
-            <input type="text" class="form-control" id="address" placeholder="Новое название" required>
-            <div class="invalid-feedback">
+        <form action="/admin_remove/remove" method="get">
+            @csrf
+            <div class="col-12">
+                <label for="address" class="form-label">Пожалуйста, введите название книги для изменения:</label>
+                <input type="text" class="form-control" id="OldBook" name="OldBook" placeholder="Название книги для поиска" required>
+                <div class="invalid-feedback">
+                    Пожалуйста, введите название книги для изменения:
+                </div>
             </div>
-        </div>
-
-        <div class="col-12">
-            <label for="address" class="form-label">Введите новое автора для этой книги:</label>
-            <input type="text" class="form-control" id="address" placeholder="Новый автор" required>
-            <div class="invalid-feedback">
-            </div>
-        </div>
             <footer class="mt-3">
-            <button class="w-100 btn btn-primary btn-lg" type="submit">Изменить книгу и автора</button>
+
+            <footer class="pt-3 mt-4 text-muted border-top">
+
+            <div class="col-12">
+                <label for="address" class="form-label">Введите новое название книги:</label>
+                <input type="text" class="form-control" id="NewBook" name="NewBook" placeholder="Новое название" required>
+                <div class="invalid-feedback">
+                </div>
+            </div>
+
+            <div class="col-12">
+                <label for="address" class="form-label">Введите новое автора для этой книги:</label>
+                <input type="text" class="form-control" id="NewAuthor" name="NewAuthor" placeholder="Новый автор" required>
+                <div class="invalid-feedback">
+                </div>
+            </div>
+                <footer class="mt-3">
+                <button class="w-100 btn btn-primary btn-lg" type="submit">Изменить книгу и автора</button>
+        </form>
         <footer class="pt-3 mt-4 text-muted border-top">
             &copy; 2022
         </footer>
